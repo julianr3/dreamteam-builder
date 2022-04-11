@@ -4,6 +4,7 @@ const Manager = require("./lib/manager.js");
 const Engineer = require("./lib/engineer.js");
 const Intern = require("./lib/intern.js");
 const teamMembers = [];
+const generateHtml = require('./src/generateHtml');
 
 const promptManager = () => {
     console.log(`
@@ -209,10 +210,14 @@ const promptIntern = () => {
 };
 
 const buildTeam = () => {
-    console.log(`
-    =======================
-    Team building complete!
-    =======================`);
+    const htmlResult = generateHtml(teamMembers);
+    fs.writeFile("index.html",htmlResult,() => {
+        console.log(`
+        =======================
+        Team building complete!
+        =======================`);
+    } )
+
 }
 
 promptManager();

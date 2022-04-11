@@ -1,4 +1,4 @@
-# dreamteam-builder
+# Dreamteam-Builder
 
 # <dreamteam-builder>
 
@@ -15,7 +15,7 @@
 - [License](#license)
 
 ## Installation
-Open index.js in VSCode. Open the terminal associated with index.js and type in "npm install 'inquirer'" then press enter. 
+Open index.js in VSCode. Open the terminal associated with index.js and type in "npm install 'inquirer' " then press enter. 
 The user will now be able to initiate the series of questions.
 
 
@@ -28,6 +28,7 @@ The user will now be able to initiate the series of questions.
 ## Credits
 
 Kyle Giuanta https://github.com/kgiunta
+
 Isaak Morales https://github.com/CallMeIce
 
 ## License
