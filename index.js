@@ -6,7 +6,12 @@ const Intern = require("./lib/intern.js");
 const teamMembers = [];
 
 const promptManager = () => {
+    console.log(`
+    ================
+    MANAGER PROFILE
+    ================`);
     return inquirer.prompt([
+        
         {
             type: 'input',
             name: 'name',
@@ -69,9 +74,9 @@ const promptMain = () => {
 
 const promptEngineer = () => {
     console.log(`
-    ================
-    add new engineer
-    ================`);
+    =================
+    ENGINEER PROFILE
+    =================`);
     return inquirer.prompt([
     {
         type: 'input',
@@ -89,7 +94,7 @@ const promptEngineer = () => {
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee id?",
+        message: "What is the engineer's id?",
         validate: employeeId => {
             if (employeeId) {
                 return true;
@@ -102,7 +107,7 @@ const promptEngineer = () => {
     {
         type: 'input',
         name: 'email',
-        message: "What is the employees's email?",
+        message: "What is the engineer's email?",
         validate: employeeEmail => {
             if (employeeEmail) {
                 return true;
@@ -138,13 +143,13 @@ const promptEngineer = () => {
 const promptIntern = () => {
     console.log(`
     ================
-    add new intern
+    INTERN PROFILE
     ================`);
     return inquirer.prompt([
     {
         type: 'input',
         name: 'name',
-        message: "What is the engineer's name?",
+        message: "What is the intern's name?",
         validate: internName => {
             if (internName) {
                 return true;
@@ -157,7 +162,7 @@ const promptIntern = () => {
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee id?",
+        message: "What is the intern's id?",
         validate: employeeId => {
             if (employeeId) {
                 return true;
@@ -170,7 +175,7 @@ const promptIntern = () => {
     {
         type: 'input',
         name: 'email',
-        message: "What is the employees's email?",
+        message: "What is the intern's email?",
         validate: employeeEmail => {
             if (employeeEmail) {
                 return true;
@@ -182,13 +187,13 @@ const promptIntern = () => {
     },
     {
         type: 'input',
-        name: 'github',
-        message: "What is the engineer's school?",
+        name: 'school',
+        message: "What is the intern's school?",
         validate: employeeSchool => {
             if (employeeSchool) {
                 return true;
             } else {
-                console.log('Please enter a valid Github username');
+                console.log('Please enter a valid school');
                 return false;
             }
         }
