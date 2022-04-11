@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Manager = require("../lib/manager");
-const Engineer = require("../lib/engineer");
-const Intern = require("../lib/intern");
+const Manager = require("./lib/manager.js");
+const Engineer = require("./lib/engineer.js");
+const Intern = require("./lib/intern.js");
 const teamMembers = [];
 
 const promptManager = () => {
@@ -43,7 +43,7 @@ const promptMain = () => {
     return inquirer.prompt([
         {
             type: 'list',
-            name: 'name',
+            name: 'main',
             message: "Which type of team member would you like to add?",
             choices: ["add engineer", "add intern", "I'm finished building my team."],
         },
@@ -61,6 +61,7 @@ const promptMain = () => {
                 break;
         
             default:
+                buildTeam();
                 break;
         }
     })
@@ -201,3 +202,12 @@ const promptIntern = () => {
     })
 
 };
+
+const buildTeam = () => {
+    console.log(`
+    ================
+    Team building complete!
+    ================`);
+}
+
+promptManager();
