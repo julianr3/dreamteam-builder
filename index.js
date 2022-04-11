@@ -89,8 +89,8 @@ const promptEngineer = () => {
         type: 'input',
         name: 'id',
         message: "What is the employee id?",
-        validate: employeeName => {
-            if (employeeName) {
+        validate: employeeId => {
+            if (employeeId) {
                 return true;
             } else {
                 console.log('Please enter a valid ID');
@@ -129,6 +129,74 @@ const promptEngineer = () => {
         console.log(answers);
         const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         teamMembers.push(engineer);
+        promptMain();
+    })
+
+};
+
+const promptIntern = () => {
+    console.log(`
+    ================
+    add new intern
+    ================`);
+    return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: "What is the engineer's name?",
+        validate: internName => {
+            if (internName) {
+                return true;
+            } else {
+                console.log('Please enter a valid name');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: "What is the employee id?",
+        validate: employeeId => {
+            if (employeeId) {
+                return true;
+            } else {
+                console.log('Please enter a valid ID');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "What is the employees's email?",
+        validate: employeeEmail => {
+            if (employeeEmail) {
+                return true;
+            } else {
+                console.log('Please enter a valid E-mail');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: "What is the engineer's school?",
+        validate: employeeSchool => {
+            if (employeeSchool) {
+                return true;
+            } else {
+                console.log('Please enter a valid Github username');
+                return false;
+            }
+        }
+    },
+   
+    ]).then(answers => {
+        console.log(answers);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        teamMembers.push(intern);
         promptMain();
     })
 
