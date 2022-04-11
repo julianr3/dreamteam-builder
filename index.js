@@ -210,9 +210,9 @@ const promptIntern = () => {
 
 const buildTeam = () => {
     console.log(`
-    ================
+    =======================
     Team building complete!
-    ================`);
+    =======================`);
 }
 
 promptManager();
