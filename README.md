@@ -2,10 +2,11 @@
 
 # <dreamteam-builder>
 
+https://github.com/julianr3/dreamteam-builder
+
 ## Description
 
-
-
+Great application for companies looking to creat an easy profile builder for their team. Answer a few questions ans have a profile generated for you with each employee having their own individual card.
 
 ## Table of Contents
 
@@ -20,10 +21,10 @@ The user will now be able to initiate the series of questions.
 
 
 ## Usage
+open the terminal and run "node index.js" and start answering the following series of questions. once complete, select the "index.html" file and open via internet browser. 
 
 
-
-![Image of website](assets/images/Portfolio.png)
+![Image of website](./src/dreamteam-builder.jpg)
 
 ## Credits
 
